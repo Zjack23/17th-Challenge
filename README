@@ -1,0 +1,58 @@
+This pattern is designed to validate URLs. It ensures the URL has a valid format, optionally including a protocol (http or https), domain, and path.
+
+Table of Contents
+Anchors
+Quantifiers
+OR Operator
+Character Classes
+Flags
+Grouping and Capturing
+Bracket Expressions
+Greedy and Lazy Match
+Boundaries
+Back-references
+Look-ahead and Look-behind
+Regex Components
+Anchors
+^: Asserts the start of the string.
+$: Asserts the end of the string.
+Quantifiers
+?: Matches 0 or 1 of the preceding token (making it optional).
+*: Matches 0 or more of the preceding token.
+{2,6}: Matches between 2 and 6 of the preceding token.
+OR Operator
+This pattern does not use the OR operator.
+
+Character Classes
+[a-z]: Matches any lowercase letter.
+[a-z\.-]: Matches any lowercase letter, dot (.), or hyphen (-).
+[a-z\.]{2,6}: Matches any combination of lowercase letters and dots with a length between 2 and 6 characters.
+[\/\w \.-]: Matches any word character (\w), space, dot (.), hyphen (-), or slash (/).
+\d: Matches any digit.
+Flags
+This pattern does not use any flags.
+
+Grouping and Capturing
+(https?:\/\/)?: Captures the protocol part of the URL, making it optional. The s? allows for either http or https.
+([\da-z\.-]+): Captures the domain name, including digits, lowercase letters, dots, and hyphens.
+([a-z\.]{2,6}): Captures the top-level domain (TLD), which consists of lowercase letters and dots, with a length between 2 and 6 characters.
+([\/\w \.-]*)*: Captures the path of the URL, allowing for any combination of word characters, spaces, dots, hyphens, and slashes, and makes it optional.
+Bracket Expressions
+[a-z]: Matches any lowercase letter.
+[a-z\.-]: Matches any lowercase letter, dot, or hyphen.
+[a-z\.]{2,6}: Matches any combination of lowercase letters and dots with a length between 2 and 6 characters.
+[\/\w \.-]: Matches any word character, space, dot, hyphen, or slash.
+Greedy and Lazy Match
+The quantifiers * and + are greedy, matching as many occurrences as possible.
+
+Boundaries
+This pattern does not use specific word boundaries like \b.
+
+Back-references
+This pattern does not use back-references.
+
+Look-ahead and Look-behind
+This pattern does not use look-ahead or look-behind assertions.
+
+Author
+Created by Your Name.
